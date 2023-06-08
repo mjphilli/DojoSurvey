@@ -1,0 +1,18 @@
+<h1>Submitted Info</h1>
+
+<h3>Name: @ViewBag.Name</h3>
+<h3>Location: @ViewBag.Location</h3>
+<h3>Favorite Language: @ViewBag.Language</h3>
+@if (ViewBag.Comment == "No comment")
+{
+    <h3>Comment: <span style="color: gray">@ViewBag.Comment</span></h3>
+}
+else
+{
+    <h3>Comment: @ViewBag.Comment</h3>
+}
+
+
+<a href='@Url.Action("Index", "Home")'>
+    <input type='button' value='Go Back' />
+</a>
